@@ -7,7 +7,7 @@ import qs from "qs"
  */
 export function getStrapiURL(path = "") {
   return `${
-    process.env.apiURL
+    process.env.apiURL || 'https://rocketstrapiblog.herokuapp.com'
   }${path}`
 }
 
