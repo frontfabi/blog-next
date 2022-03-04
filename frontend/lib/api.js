@@ -7,7 +7,7 @@ import qs from "qs"
  */
 export function getStrapiURL(path = "") {
   return `${
-    process.env.apiURL || "http://localhost:1337"
+    process.env.apiURL
   }${path}`
 }
 
