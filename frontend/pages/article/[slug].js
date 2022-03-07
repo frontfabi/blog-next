@@ -1,10 +1,10 @@
 import ReactMarkdown from "react-markdown"
 import Moment from "react-moment"
-import { fetchAPI } from "../../lib/api"
-import Layout from "../../components/layout"
 import NextImage from "../../components/image"
+import Layout from "../../components/layout"
 // import NextImage from "next/image"
 import Seo from "../../components/seo"
+import { fetchAPI } from "../../lib/api"
 import { getStrapiMedia } from "../../lib/media"
 
 const Article = ({ article, categories }) => {
@@ -16,7 +16,7 @@ const Article = ({ article, categories }) => {
     shareImage: article.attributes.image,
     article: true,
   }
-console.log(article.attributes.author)
+  console.log(article.attributes.author)
   return (
     <Layout categories={categories.data}>
       <Seo seo={seo} />
@@ -39,7 +39,9 @@ console.log(article.attributes.author)
           <div className="uk-grid-small uk-flex-left" data-uk-grid="true">
             <div>
               {article.attributes.author.data.attributes.picture && (
-                <NextImage image={article.attributes.author.data.attributes.picture} />
+                <NextImage
+                  image={article.attributes.author.data.attributes.picture}
+                />
               )}
             </div>
             <div className="uk-width-expand">
